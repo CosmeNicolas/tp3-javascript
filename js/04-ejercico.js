@@ -8,7 +8,6 @@ function parOimpar(numero) {
   }else{
     document.write(`EL numero ${numero} es "Impar"`)
   }
-  
 }
 parOimpar(numero);
 
