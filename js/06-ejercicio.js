@@ -20,4 +20,4 @@ function perimetro(primerLado,segundoLado){
  document.write(`El resultado del Perimetro es ${resultadoPerimetro}`)
 }
 
-perimetro(primerLado,segundoLado)
+perimetro(primerLado,segundoLado);
