@@ -2,3 +2,19 @@ body {
   background-color: rgba(0, 0, 0, 0.877);
   color: white;
 }
+
+.titulo-tabla{
+  text-align: center;
+}
+
+
+.tabla{
+  border: 2px solid white;
+  text-align: center;
+}
+
+.centrar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
