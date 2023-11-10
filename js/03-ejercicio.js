@@ -2,22 +2,24 @@
 
 
 */
-const lanzamientoDados = [];
-const apariciones = [2,3,4,5,6,7,8,9,10,11,12]
 
-const repeticiones = []
-console.log(repeticiones)
+const apariciones = [0,0,0,0,0,0,0,0,0,0,0,0,0]
+console.log(apariciones.length)
+
+
 
 
 
 //tirada de dados mas suma 
-for(let tirada = 0 ; tirada < 50; tirada++ ){
-  const lanzamiento1 = parseInt(Math.random() * 6 + 1)
-  const lanzamiento2 = parseInt(Math.random() * 6 + 1)
+for(let tirada = 0  ; tirada < 50; tirada++ ){
+  let lanzamiento1 = Math.floor(Math.random() * 6 )+ 1;
+  let lanzamiento2 = Math.floor(Math.random() * 6 )+ 1;
   const sumaLanzamientos = lanzamiento1 + lanzamiento2;
-  lanzamientoDados.push(sumaLanzamientos);
-  
+  console.log(lanzamiento1,lanzamiento2,sumaLanzamientos);
+  apariciones[sumaLanzamientos]++
 }
+
+console.log(apariciones)
 
 document.write(`<h2 class="titulo-tabla">🎲Tira de dados 🎲</h2>`)
 document.write(`<table>`);
@@ -27,10 +29,10 @@ document.write(`<th  class="tabla">Suma🎲</th><th class="tabla">Apariciones�
 document.write(`</tr>`);
 document.write(`<tbody>`)
 
-for(let sumas = 0; sumas < apariciones.length; sumas++){
+for(let i = 2; i <= 12 ; i++){
   document.write(`<tr>`);
-  document.write(`<td>${apariciones[sumas]}</td>`);
-  document.write(`<td>${repeticiones[0]}</td>`);
+  document.write(`<td>${i}</td>`);
+  document.write(`<td>${apariciones[i]}</td>`);
   document.write(`</tr>`);
 } 
 
@@ -38,8 +40,6 @@ for(let sumas = 0; sumas < apariciones.length; sumas++){
 document.write(`</tbody>`)
 document.write(`</table>`);
 
-
-console.log(lanzamientoDados);
 
 
 
